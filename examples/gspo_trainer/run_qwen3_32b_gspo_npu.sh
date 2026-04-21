@@ -12,7 +12,6 @@ export HCCL_CONNECT_TIMEOUT=3600
 export HCCL_ASYNC_ERROR_HANDLING=0
 export CPU_AFFINITY_CONF=1
 export VLLM_USE_V1=1
-export VLLM_ATTENTION_BACKEND=XFORMERS
 export VLLM_ASCEND_ENABLE_FLASHCOMM=1
 export VLLM_ASCEND_ENABLE_PREFETCH_MLP=1
 export VLLM_ASCEND_ENABLE_DENSE_OPTIMIZE=1
@@ -169,7 +168,7 @@ ROLLOUT_CONFIG=(
     actor_rollout_ref.rollout.val_kwargs.top_p=0.7
     actor_rollout_ref.rollout.val_kwargs.top_k=-1
     actor_rollout_ref.rollout.val_kwargs.temperature=1.0
-    +actor_rollout_ref.rollout.checkpoint_engine.update_weights_bucket_megabytes=4096
+    actor_rollout_ref.rollout.checkpoint_engine.update_weights_bucket_megabytes=4096
 )
 
 # Trainer Configuration
